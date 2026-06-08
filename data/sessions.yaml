@@ -1,11 +1,45 @@
 # data/schedule.yaml
 upcoming:
-  - date: "TBD"
-    title: "TBD"
-    presenter: "Armin Tourajmehr & Mohammadreza Modarres"
-    description: "TBD"
+  - date: "2026-06-15"
+    title: "Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction"
+    presenter: "TBA"
+    description: "TBA"
 
 past:
+  - date: "2026-06-08"
+    title: "Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)"
+    presenter: "Amir Mesbah"
+    description: "Neurips 2025 dataset paper on the homogeneity of language models and its implications for creativity and diversity in AI systems."
+    materials:
+      - type: "Slides"
+        url: "uploads/session6/Hivemind_Presentation.pdf"
+
+  - date: "2025-12-15"
+    title: "Kaufman & Sternberg (2019). The Cambridge Handbook of Creativity. 2nd ed"
+    presenter: "Sepehr Kamahi, Melika Nobakhtian"
+    description: "Chapter 5: enhancing creativity"
+    materials: []
+
+
+  - date: "2025-12-08"
+    title: "Creative Preference Optimization"
+    presenter: "Yadollah Yaghoobzadeh"
+    description:
+    materials:
+      - type: "Paper Link"
+        url: "https://aclanthology.org/2025.findings-emnlp.509/f"
+
+
+  - date: "2025-12-01"
+    title: "Creative Text Generation Tutorial"
+    presenter: "Armin Tourajmehr"
+    description: "Papers discussed:  
+                  Art or Artifice? Large Language Models and the False Promise of Creativity
+                  Automated Creativity Evaluation for Large Language Models: A Reference-Based Approach 
+                  Assessing and Understanding Creativity in Large Language Models 
+                  EMNLP 23 Tutorial on Creative NLG"
+    materials: []
+
   - date: "2025-11-17"
     title: "Kaufman & Sternberg (2019). The Cambridge Handbook of Creativity. 2nd ed"
     presenter: "Mohammadali Yousefzadeh"
