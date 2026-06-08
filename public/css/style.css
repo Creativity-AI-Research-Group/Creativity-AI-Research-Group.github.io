@@ -1,0 +1,437 @@
+:root {
+    --primary: #FF0066;
+    --secondary: #00CC99;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+    --table-border: #e0e0e0;
+    --font-main: 'Poppins', sans-serif;
+}
+
+/* --- GLOBAL LAYOUT --- */
+html, body { height: 100%; margin: 0; }
+body { 
+    display: flex; 
+    flex-direction: column; 
+    font-family: var(--font-main); 
+    color: var(--dark); 
+    background: #fff; 
+}
+main { flex: 1; } /* Pushes footer down */
+
+a { color: var(--primary); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--secondary); }
+
+/* --- NAVIGATION --- */
+nav { 
+    display: flex; 
+    justify-content: center; 
+    
+    /* CHANGE 1: Make the menu taller/bigger */
+    padding: 1.5rem 2rem; 
+    
+    /* CHANGE 2: Push the menu down from the very top of the screen */
+    margin-top: 0rem; 
+    
+    background: #fff;
+    
+    /* Optional: Round the corners since it's floating now */
+    border-radius: 8px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo { 
+    margin-bottom: 1rem; /* Space between logo and menu */
+    font-weight: 600; 
+    font-size: 1.5rem; 
+}
+
+.menu { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; /* Wider gap for centered look */
+    margin: 0; 
+    padding: 0; 
+}
+
+.menu li a {
+    font-weight: 500;
+    
+    /* CHANGE 3: Make the text bigger */
+    font-size: 1.15rem; 
+    
+    color: var(--dark);
+}
+
+
+/* --- NEW COVER SECTION (Fixed) --- */
+/* --- CINEMATIC BANNER COVER --- */
+.cover-section {
+    position: relative;
+    width: 100%;
+    
+    /* CHANGE 1: Fixed, shorter height */
+    height: 310px; 
+    
+    /* CHANGE 2: Parallax Effect (Image stays still while you scroll) */
+    /* If this feels dizzying, just remove 'background-attachment: fixed;' */
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* CHANGE 3: Add space below so content doesn't touch it */
+    margin-top: 0rem;
+    margin-bottom: 0rem; 
+}
+
+/* Ensure the image tag is hidden if we use parallax, 
+   OR we can just use the img tag method without parallax. 
+   
+   Let's stick to the IMG TAG method you have, but crop it.
+*/
+/* Update this specific rule */
+.cover-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover; 
+    
+    /* CHANGE 4: This forces the image to center vertically and horizontally */
+    object-position: center center; 
+    
+    z-index: 0;
+}
+
+/* Dark overlay to make text readable */
+.cover-overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    
+    /* Dark gradient + Dot Pattern */
+    background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==');
+        
+    z-index: 1;
+}
+
+/* The Text */
+.cover-text {
+    position: relative;
+    z-index: 2; /* Sits on top of overlay */
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 1rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+
+
+/* --- FOOTER CAPTION --- */
+.photo-credit {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #aaa;
+    font-style: italic;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    display: inline-block;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    background: #fcfcfc;
+    /* CHANGE: Remove horizontal padding here (change 2rem to 0) */
+    padding: 0rem 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    
+    /* CHANGE: Match the .container width */
+    max-width: 1600px; 
+    
+    /* CHANGE: Match the .container padding */
+    padding: 3rem 0rem 5rem 0rem;   
+    
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1 1 300px; 
+    text-align: left;
+    min-width: 300px;
+}
+
+.hero-sub-section {
+    margin-top: 1.5rem;
+    border-left: 3px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.hero-sub-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.theme-list { margin: 0; padding-left: 1rem; }
+.theme-list li { margin-bottom: 0.3rem; font-size: 0.95rem; color: #555; }
+
+/* Hero Illustration/SVG Container */
+.illustration-container {
+    flex: 1 1 400px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration-container svg { width: 100%; height: auto; display: block; }
+
+/* Background Blobs */
+.svg-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+.svg-bg svg { position: absolute; opacity: 0.15; width: 400px; }
+
+/* --- PEOPLE GRID --- */
+/* --- PEOPLE GRID & BODY CONTAINER --- */
+.container { 
+    /* This must match .hero-wrapper max-width */
+    max-width: 1600px; 
+    
+    margin: 2rem auto; 
+    
+    /* This must match .hero-wrapper padding */
+    padding: 0 1rem; 
+}
+.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2rem; margin-top: 1rem; }
+.person-card { text-align: center; padding: 1.5rem; border: 1px solid #eee; border-radius: 10px; transition: transform 0.2s; background: white; }
+.person-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.person-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid var(--light); }
+.person-card h3 { margin: 0.5rem 0; font-size: 1.1rem; }
+.social-icons { margin-top: 15px; display: flex; justify-content: center; gap: 10px; }
+.social-icons a svg { width: 20px; height: 20px; fill: var(--dark); transition: fill 0.2s; }
+.social-icons a:hover svg { fill: var(--primary); }
+
+/* --- SESSION LOG TABLE --- */
+.session-table { width: 100%; border-collapse: collapse; margin-top: 2rem; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.session-table th, .session-table td { text-align: left; padding: 1rem; border-bottom: 1px solid var(--table-border); vertical-align: top; }
+.session-table th { background-color: var(--secondary); color: white; }
+.session-table tr:last-child td { border-bottom: none; }
+.material-btn { display: inline-block; font-size: 0.8rem; background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; margin-right: 5px; }
+.material-btn:hover { background: var(--dark); color: white; }
+
+/* --- FOOTER --- */
+footer { text-align: center; padding: 2rem; background: var(--dark); color: #fff; margin-top: auto; }
+
+/* --- ANIMATIONS --- */
+@keyframes breathe {
+    0% { opacity: 0.6; stroke-width: 1px; }
+    50% { opacity: 1; stroke-width: 2px; }
+    100% { opacity: 0.6; stroke-width: 1px; }
+}
+@keyframes dashDraw { to { stroke-dashoffset: 0; } }
+@keyframes floatBlob { 
+    0% { transform: translate(0, 0); } 
+    50% { transform: translate(20px, -20px); } 
+    100% { transform: translate(0, 0); } 
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 850px) {
+    /* Nav */
+    nav { flex-direction: column; gap: 1rem; }
+    .menu { flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+    /* Hero */
+    .hero { padding: 2rem 1rem; }
+    .hero-wrapper {
+        flex-direction: column; /* Stack items */
+        gap: 3rem;
+        text-align: center;
+    }
+    .hero-content { text-align: center; padding: 0; }
+    
+    /* Hero Lists & Borders on mobile */
+    .hero-sub-section { border-left: none; border-top: 3px solid var(--primary); padding-left: 0; padding-top: 1rem; }
+    .theme-list { padding: 0; list-style-position: inside; }
+
+    /* Illustration */
+    .illustration-container { flex: 0 0 100%; max-width: 400px; margin: 0 auto; }
+
+    /* Table Scrolling */
+    .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 1rem; }
+    .session-table { min-width: 600px; }
+}
+
+
+/* --- PUBLICATIONS PAGE UPDATED --- */
+
+/* 1. Main Section Styling */
+.section-title {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 2. Visual Separator between Ongoing and Published */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 4rem 0;
+}
+
+/* 3. Year Separator (Text + Line) */
+.year-separator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 2rem 0 1rem 0;
+}
+
+.year-label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.year-line {
+    flex: 1; /* Takes up remaining space */
+    height: 2px;
+    background: #f0f0f0;
+    border-radius: 2px;
+}
+
+/* 4. The Card (Rectangular White Box) */
+.pub-list { display: flex; flex-direction: column; gap: 1rem; }
+
+.pub-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center content */
+    background: #ffffff;
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-left: 4px solid var(--secondary); /* Color accent on left */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02); /* Very light shadow */
+    transition: transform 0.2s, box-shadow 0.2s;
+    gap: 20px;
+}
+
+.pub-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-color: var(--primary);
+}
+
+/* 5. Card Content */
+.pub-info { flex: 1; }
+
+.pub-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+/* Inline Meta Data */
+.pub-meta {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.pub-authors { font-weight: 500; color: #333; }
+.pub-venue { font-style: italic; color: var(--primary); }
+.pub-year { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+.meta-separator { margin: 0 8px; color: #ccc; }
+
+/* 6. Action Buttons (Aligned & Sized) */
+.pub-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #7f8c8d;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 6px;
+    background: #f9f9f9;
+    min-width: 50px;
+    transition: 0.2s;
+}
+
+.action-btn svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+    stroke-width: 2px;
+}
+
+.action-btn:hover {
+    background: var(--dark);
+    color: #fff;
+}
+
+/* Distinct styling for PDF to make it pop */
+.pdf-btn:hover { background: #e74c3c; color: white; }
+.arxiv-btn:hover { background: #d35400; color: white; }
+.link-btn:hover { background: #3498db; color: white; }
+
+/* Mobile Response */
+@media (max-width: 768px) {
+    .pub-card { flex-direction: column; align-items: flex-start; }
+    .pub-actions { width: 100%; justify-content: flex-start; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 10px; }
+}

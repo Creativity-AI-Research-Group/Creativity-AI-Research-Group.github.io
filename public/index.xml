@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI &amp; Creativity Study Group</title>
+    <link>Creativity-AI-Reading-Group.github.io/</link>
+    <description>Recent content on AI &amp; Creativity Study Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="Creativity-AI-Reading-Group.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meeting Schedule</title>
+      <link>Creativity-AI-Reading-Group.github.io/sessions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>Creativity-AI-Reading-Group.github.io/sessions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Members</title>
+      <link>Creativity-AI-Reading-Group.github.io/members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>Creativity-AI-Reading-Group.github.io/members/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>Creativity-AI-Reading-Group.github.io/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>Creativity-AI-Reading-Group.github.io/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>Creativity-AI-Reading-Group.github.io/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>Creativity-AI-Reading-Group.github.io/resources/</guid>
+      <description>Books The Cambridge Handbook of Creativity by Kaufman &amp;amp; Sternberg (2019) 2nd ed Papers TBD </description>
+    </item>
+    
+  </channel>
+</rss>
