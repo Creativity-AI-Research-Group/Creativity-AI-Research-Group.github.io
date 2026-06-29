@@ -34,9 +34,42 @@ members:
       - service: "twitter"
         url: "https://twitter.com/zaha_habibzadeh"
 
-  - name: "	Paria Khoshtab"
+  - name: "Paria Khoshtab"
     role: "Researcher"
     image: "images/members/Paria_Khostab.jpg"
     social:
       - service: "linkedin"
         url: "https://www.linkedin.com/in/paria-khoshtab-92a593217/"
+
+  - name: "Armin Tourajmehr"
+    role: "Researcher"
+    image: "images/members/Armin_Tourajmehr.jpg"
+    social:
+      - service: "linkedin"
+        url: "https://www.linkedin.com/in/armin-tourajmehr"
+
+
+  - name: "M. Amin Rafiei"
+    role: "Researcher"
+    image: "https://api.dicebear.com/10.x/stripes/svg?seed=Felix"
+    social:
+      - service: "linkedin"
+        url: "https://www.linkedin.com/in/amin-rafiei-662458345/"
+
+  - name: "Faezeh Hosseini"
+    role: "Researcher"
+    image: "images/members/Faezeh_Hosseini.jpg"
+    social:
+      - service: "linkedin"
+        url: "https://www.linkedin.com/in/faezeh-hosseini-b813a821a"
+      - service: "website"
+        url: "https://github.com/hfaezeh77"
+
+
+
+  - name: "Farshad Hessami"
+    role: "Researcher"
+    image: "https://api.dicebear.com/10.x/stripes/svg?seed=Felix"
+    social:
+      - service: ""
+        url: ""

@@ -1,11 +1,17 @@
 # data/schedule.yaml
 upcoming:
-  - date: "2026-06-15"
-    title: "Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction"
+  - date: "TBA"
+    title: "TBA"
     presenter: "TBA"
     description: "TBA"
 
 past:
+  - date: "2026-06-15"
+    title: "Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction"
+    presenter: "Farshad Hessami"
+    description: "ICML 2025 (spotlight)"
+    materials: []
+
   - date: "2026-06-08"
     title: "Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)"
     presenter: "Amir Mesbah"
